@@ -9,6 +9,6 @@ fec1<-as.Date("01/02/2007","%d/%m/%Y")
 vec<-c(fec1,fec2)
 midata<-data[data$Date %in% vec,]
 #First plot 
-png("plot1.png")
+png("plot1.png",width = 480, height = 480)
 hist(as.numeric(as.character(midata$Global_active_power)),col="red", main="Histogram Global activity power",xlab="Global active Power (Kilowatts)",breaks=15, right=FALSE)
 dev.off()

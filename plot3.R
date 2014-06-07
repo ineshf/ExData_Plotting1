@@ -11,7 +11,7 @@ miDate<-strptime(datecomp, "%Y-%m-%d %H:%M:%S")
 odata<-cbind(midata,miDate)
 
 ##########PLOT 3###############
-png("plot3.png")
+png("plot3.png",width = 480, height = 480)
 plot(odata$miDate, as.numeric(as.character(odata$Sub_metering_3)),type="l", main="Plot 3", col="blue",xlab="",ylab="Energy metering",ylim=c(0,30))
 lines(odata$miDate,as.numeric(as.character(odata$Sub_metering_2)), type="l",col="red")
 lines(odata$miDate,as.numeric(as.character(odata$Sub_metering_1)), type="l",col="black")

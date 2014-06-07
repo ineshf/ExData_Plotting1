@@ -13,7 +13,7 @@ miDate<-strptime(datecomp, "%Y-%m-%d %H:%M:%S")
 odata<-cbind(midata,miDate)
 
 ##########PLOT 4###############
-png("plot4.png")
+png("plot4.png",width = 480, height = 480)
 par(mfrow = c(2, 2))
 plot(odata$miDate, odata$Global_active_power,type="l", xlab="",ylab="Global active Power (Kilowatts)")
 plot(odata$miDate, odata$Voltage, type="l",ylab="Global active Power (Kilowatts)",xlab="DateTime")

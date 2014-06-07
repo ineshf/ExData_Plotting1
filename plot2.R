@@ -11,7 +11,7 @@ midata<-data[data$Date %in% vec,]
 datecomp<-paste(midata$Date, sep=" ", midata$Time)
 miDate<-strptime(datecomp, "%Y-%m-%d %H:%M:%S")
 odata<-cbind(midata,miDate)
-png("plot2.png")
+png("plot2.png",width = 480, height = 480)
 plot(odata$miDate, odata$Global_active_power,type="l", main="Plot 2", xlab="",ylab="Global active Power (Kilowatts)")
 dev.off()
 
